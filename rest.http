@@ -1,0 +1,19 @@
+@baseurl = {{$dotenv PROTOCOL}}://{{$dotenv HOST}}:{{$dotenv PORT}}
+
+@apiurl = {{baseurl}}/api/v1
+
+### GET base
+GET {{baseurl}}/
+
+
+### GET api/v1
+GET {{apiurl}}/
+
+### POST /api/v1/data
+POST {{apiurl}}/data
+Content-Type: application/json
+
+{
+    "name": "John",
+    "score": 23.4
+}
